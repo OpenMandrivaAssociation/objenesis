@@ -1,0 +1,24 @@
+diff -r a6eb6f4f2a1b objenesis-1.2/main/src/org/objenesis/instantiator/jrockit/JRockit131Instantiator.java
+--- a/objenesis-1.2/main/src/org/objenesis/instantiator/jrockit/JRockit131Instantiator.java	Mon Feb 20 09:13:19 2012 +0100
++++ b/objenesis-1.2/main/src/org/objenesis/instantiator/jrockit/JRockit131Instantiator.java	Mon Feb 20 09:15:05 2012 +0100
+@@ -7,7 +7,7 @@
+  *
+  * BEA does not guarantee that the code works, and provides no support for it. Use at your own risk.
+  *
+- * Originally developed by Leonardo Mesquita. Copyright notice added by Henrik Ståhl, BEA JRockit Product Manager.
++ * Originally developed by Leonardo Mesquita. Copyright notice added by Henrik St\u00E0hl, BEA JRockit Product Manager.
+  *  
+  */
+ package org.objenesis.instantiator.jrockit;
+diff -r a6eb6f4f2a1b objenesis-1.2/main/src/org/objenesis/instantiator/jrockit/JRockitLegacyInstantiator.java
+--- a/objenesis-1.2/main/src/org/objenesis/instantiator/jrockit/JRockitLegacyInstantiator.java	Mon Feb 20 09:13:19 2012 +0100
++++ b/objenesis-1.2/main/src/org/objenesis/instantiator/jrockit/JRockitLegacyInstantiator.java	Mon Feb 20 09:15:05 2012 +0100
+@@ -7,7 +7,7 @@
+  *
+  * BEA does not guarantee that the code works, and provides no support for it. Use at your own risk.
+  *
+- * Originally developed by Leonardo Mesquita. Copyright notice added by Henrik Ståhl, BEA JRockit Product Manager.
++ * Originally developed by Leonardo Mesquita. Copyright notice added by Henrik St\u00E0hl, BEA JRockit Product Manager.
+  *  
+  */
+ 

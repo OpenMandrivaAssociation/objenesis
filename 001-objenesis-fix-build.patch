@@ -1,0 +1,116 @@
+--- A/main/pom.xml	2009-08-27 00:15:13.000000000 +0200
++++ B/main/pom.xml	2010-05-10 14:44:07.634785201 +0200
+@@ -38,7 +38,7 @@
+         <artifactId>maven-timestamp-plugin</artifactId>
+       </plugin>      
+       <plugin>
+-        <groupId>com.google.code.maven-license-plugin</groupId>
++        <groupId>com.mycila.maven-license-plugin</groupId>
+         <artifactId>maven-license-plugin</artifactId>
+       </plugin>
+       <plugin>
+--- A/pom.xml	2009-08-26 23:12:00.000000000 +0200
++++ B/pom.xml	2010-05-10 14:44:07.635789574 +0200
+@@ -203,9 +203,9 @@
+           </executions>
+         </plugin>
+         <plugin>
+-          <groupId>com.google.code.maven-license-plugin</groupId>
++          <groupId>com.mycila.maven-license-plugin</groupId>
+           <artifactId>maven-license-plugin</artifactId>
+-          <version>1.4.0</version>
++          <version>1.6.1</version>
+           <configuration>
+             <header>${basedir}/../header.txt</header>
+             <excludes>
+@@ -291,7 +291,7 @@
+         <pluginManagement>
+           <plugins>
+             <plugin>
+-              <groupId>com.google.code.maven-license-plugin</groupId>
++              <groupId>com.mycila.maven-license-plugin</groupId>
+               <artifactId>maven-license-plugin</artifactId>
+               <executions>
+                 <execution>
+--- A/tck/pom.xml	2009-08-26 23:27:20.000000000 +0200
++++ B/tck/pom.xml	2010-05-10 14:52:36.424792684 +0200
+@@ -34,70 +34,6 @@
+       <version>${project.version}</version>
+     </dependency>
+ 
+-    <!-- Dependencies below are for the OSGi test -->
+-  
+-    <dependency>
+-      <groupId>org.springframework.osgi</groupId>
+-      <artifactId>spring-osgi-test</artifactId>
+-      <version>1.2.0</version>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.osgi</groupId>
+-      <artifactId>spring-osgi-annotation</artifactId>
+-      <version>1.2.0</version>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.osgi</groupId>
+-      <artifactId>spring-osgi-extender</artifactId>
+-      <version>1.2.0</version>
+-      <scope>test</scope>
+-    </dependency>
+-    
+-    <!-- These are just to have a nice logging -->
+-    <dependency>
+-      <groupId>org.slf4j</groupId>
+-      <artifactId>com.springsource.slf4j.org.apache.commons.logging</artifactId>
+-      <version>1.5.0</version>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.slf4j</groupId>
+-      <artifactId>com.springsource.slf4j.api</artifactId>
+-      <version>1.5.0</version>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.slf4j</groupId>
+-      <artifactId>com.springsource.slf4j.log4j</artifactId>
+-      <version>1.5.0</version>
+-      <scope>test</scope>
+-      <exclusions>
+-        <exclusion>
+-          <artifactId>log4j</artifactId>
+-          <groupId>log4j</groupId>
+-        </exclusion>
+-        <exclusion>
+-          <artifactId>com.springsource.org.apache.log4j</artifactId>
+-          <groupId>org.apache.log4j</groupId>
+-        </exclusion>
+-      </exclusions>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.osgi</groupId>
+-      <artifactId>log4j.osgi</artifactId>
+-      <version>1.2.15-SNAPSHOT</version>
+-      <scope>test</scope>
+-    </dependency>
+-    
+-    <!-- And this is our Equinox implementation -->
+-    <dependency>
+-      <groupId>org.eclipse.osgi</groupId>
+-      <artifactId>org.eclipse.osgi</artifactId>
+-      <version>3.2.2</version>
+-      <scope>test</scope>
+-    </dependency>
+   </dependencies>
+   
+   <build>
+@@ -107,7 +43,7 @@
+         <artifactId>maven-timestamp-plugin</artifactId>
+       </plugin>
+       <plugin>
+-        <groupId>com.google.code.maven-license-plugin</groupId>
++        <groupId>com.mycila.maven-license-plugin</groupId>
+         <artifactId>maven-license-plugin</artifactId>
+       </plugin>
+       <plugin>
