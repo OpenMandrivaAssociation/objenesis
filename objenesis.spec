@@ -1,4 +1,4 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 # Copyright (c) 2000-2009, JPackage Project
 # All rights reserved.
 #
@@ -32,7 +32,7 @@
 Summary:        A library for instantiating Java objects
 Name:           objenesis
 Version:        1.2
-Release:        16.0%{?dist}
+Release:        16.1%{?dist}
 
 License:        ASL 2.0
 URL:            http://objenesis.org/
