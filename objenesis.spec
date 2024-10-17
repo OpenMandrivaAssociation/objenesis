@@ -35,7 +35,7 @@ Version:        1.2
 Release:        16.1%{?dist}
 
 License:        ASL 2.0
-URL:            http://objenesis.org/
+URL:            https://objenesis.org/
 # svn export http://objenesis.googlecode.com/svn/tags/1_2/ objenesis-1.2
 # tar cfJ objenesis-1.2.tar.xz objenesis-1.2
 Source0:        %{name}-%{version}.tar.xz
