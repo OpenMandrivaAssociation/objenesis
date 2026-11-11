@@ -1,0 +1,19 @@
+--- a/objenesis-2.6/main/src/main/java/org/objenesis/instantiator/util/ClassDefinitionUtils.java
++++ b/objenesis-2.6/main/src/main/java/org/objenesis/instantiator/util/ClassDefinitionUtils.java
+@@ -97,7 +97,15 @@
+    @SuppressWarnings("unchecked")
+    public static <T> Class<T> defineClass(String className, byte[] b, ClassLoader loader)
+       throws Exception {
+-      Class<T> c = (Class<T>) UnsafeUtils.getUnsafe().defineClass(className, b, 0, b.length, loader, PROTECTION_DOMAIN);
++      // JDK 27 removed Unsafe.defineClass. Call it reflectively so this
++      // 2.6 tree still compiles. ObjenesisStd does not use this path.
++      java.lang.reflect.Method define;
++      try {
++         define = sun.misc.Unsafe.class.getMethod("defineClass", String.class, byte[].class, int.class, int.class, ClassLoader.class, ProtectionDomain.class);
++      } catch (NoSuchMethodException e) {
++         throw new UnsupportedOperationException("Unsafe.defineClass was removed", e);
++      }
++      Class<T> c = (Class<T>) define.invoke(UnsafeUtils.getUnsafe(), className, b, 0, b.length, loader, PROTECTION_DOMAIN);
+       // Force static initializers to run.
+       Class.forName(className, true, loader);
+       return c;
